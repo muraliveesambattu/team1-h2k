@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <style>
+        /* Go And find all h1 Elements in this document and Chnage the font Color  */
+        /* Element Selector  */
+        h1 {
+            color: red;
+        }
+
+        /* Go And Find the Element which having a ID Selector "myHeading" and Change the Background  */
+        /* ID Selector  */
+        /* ID selectors are Unique - We cant have same ID Selectors for multiple Elements  */
+        #myHeading{
+            background: lightblue;
+        }
+
+        /* GO And find all the elements which is having a Class name of myClassHeading And apply the following Styles  */
+        /* Class Selector  */
+        /* Class selectors can be applied for multiple elements  */
+        .myClassHeading{
+            font-style: italic;
+            background: lightcoral;
+            color: white;
+        }
+
+        /* GO And find all the Elements with given selectors , And apply the Style  */
+        /* Grouping Selectors */
+        /* Grouping Selectors selects all the Elments with the Given Selectors  */
+        h1, #myHeading, .myClassHeading{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="myClassHeading">Welcome to CSS Selectors Topic </h1>
+    <h1 id="myHeading">Welcome to CSS Selectors Topic </h1>
+    <h1>Welcome to CSS Selectors Topic </h1>
+    <h1 class="myClassHeading">Welcome to CSS Selectors Topic </h1>
+
+</body>
+
+</html>
