@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Inputs Example</title>
+</head>
+<body>
+  <h2>HTML Form Input Examples</h2>
+  <form>
+    <!-- Text input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <!-- Email input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <!-- Password input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <!-- Number input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+    <!-- Date input -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <!-- Time input -->
+    <label for="time">Choose a time:</label>
+    <input type="time" id="time" name="time"><br><br>
+
+    <!-- Color input -->
+    <label for="favcolor">Favorite color:</label>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+
+    <!-- Checkbox input -->
+    <label>Hobbies:</label><br>
+    <input type="checkbox" id="cricket" name="hobby" value="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="music" name="hobby" value="music">
+    <label for="music">Music</label><br><br>
+
+    <!-- Radio input -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Range input -->
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" name="volume" min="0" max="100"><br><br>
+
+    <!-- File input -->
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <!-- Hidden input -->
+    <input type="hidden" name="userid" value="12345">
+
+    <!-- Textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+    <!-- Select dropdown -->
+    <label for="country">Choose Country:</label>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- Submit & Reset buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>
