@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            /* row-gap: 50px; */
+            /* column-gap: 50px; */
+            grid-template-columns: auto auto auto;
+            background: blue;
+            padding: 10px;
+
+        }
+        .box{
+            background: gray;
+            margin: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+        .newbox{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .content4{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background: red;
+        }
+        .content8{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background: white;
+        }
+        .content3{
+            grid-row-start: 2;
+            grid-row-end: 5;
+            background: greenyellow;
+        }
+        .content9{
+            grid-row-start: 6;
+            grid-row-end: 8;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="box newbox">content 1</div>
+        <div class="box">content 2</div>
+        <div class="box content3">content 3</div>
+        <div class="box content4">content 4</div>
+        <div class="box">content 5</div>
+        <div class="box">content 6</div>
+        <div class="box">content 7</div>
+        <div class="box content8">content 8</div>
+        <div class="box content9">content 9</div>
+        <div class="box">content 10</div>
+        <div class="box">content 11</div>
+        <div class="box">content 12</div>
+    </div>
+</body>
+</html>

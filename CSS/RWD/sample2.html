@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            width: 200px;
+            padding: 20px;
+            background: red;
+            margin: 5px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+        }
+
+        @media screen and (max-width:768px) {
+            li {
+                width: 42%;
+                margin: 1px;
+            }
+        }
+         @media screen and (max-width:425px) {
+            li {
+                width: 100%;
+                margin: 1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="listitem">Item 1</li>
+            <li class="listitem">Item 2</li>
+            <li class="listitem">Item 3</li>
+            <li class="listitem">Item 4</li>
+            <li class="listitem">Item 5</li>
+            <li class="listitem">Item 6</li>
+        </ul>
+    </nav>
+</body>
+
+</html>

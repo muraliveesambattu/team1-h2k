@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Data Structures
+
+        // Objects
+        // Arrays 
+        // Sets 
+
+        // Method 1 : Literal Way of Creating An Object 
+        var person = {
+            fname: "Murali",  // Property of an Object , In This fname is Key , Murali is value 
+            lname: "Krishna",
+            mobile: 9663856625
+        };
+
+        // Method 2 : Built In Constructor or Built in Mehod 
+        var student = new Object({
+            fname:"Ram"
+        })
+
+        // Custom Constructor 
+        function Employee(fname,lname){
+            this.fname = fname;
+            this.lname = lname;
+        }
+
+        // Method 3 : With Custom Constructor !!
+        var emp1 = new Employee("Kiran","Kumar") ;
+
+        // ECMA
+        // ES6 
+
+        class MyStudent{
+            constructor(fname,lname,email){
+                this.fname = fname;
+                this.lname = lname;
+                this.email = email
+            }
+        }
+
+        var user = new MyStudent("Raghu","Ram","raghuram@gmail.com")
+
+        console.log(person);
+        console.log(student);
+        console.log(emp1);
+        console.log(user)
+    </script>
+</body>
+
+</html>
