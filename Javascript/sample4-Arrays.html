@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var students = ["Murali", "Krishna", "Ram", "Bala", "sam"];
+        var newStudents = ["Kiran", "Kumaar"]
+
+        // Adding Values to the Array 
+        // students.push("Raghu") // Will add a value to the End of the Array 
+        // students.unshift("Thilak") // Will add a value to the Start of the Array 
+        // students.splice(2,0,"Shekar"); // Will add a value at given index 
+
+        // Remove Values From the Array 
+        // students.pop() // Will Remove the Last Value of an Array 
+        // students.shift() //Will Remove the first value of an Array 
+        // students.splice(1,1)
+
+        // students.sort()
+        // students.reverse()
+
+        var newArr = students.concat(newStudents) // Will Merge both given arrays 
+        // console.log(students)
+        // console.log(students.length)
+        // console.log(newArr)
+
+        newArr.forEach(function (val, i, arr) {
+            // console.log(val)
+            // console.log(i)
+            // console.log(arr)
+        })
+
+        // var newstudents = newArr.map(function (val,i,arr){
+        //     return val +"_H2k"
+        // })
+        // console.log(newstudents)
+
+        // var results = newArr.find(function (val) {
+        //     return val.length == 6; // Will return first Match .
+        // })
+
+        // var results = newArr.filter(function (val){
+        //     return val.length == 6 ;
+        // })
+
+        // console.log(results)
+
+        // var results = newArr.every(function (val) {
+        //     return val.length >= 3
+        // })
+
+        // var results = newArr.some(function (val){
+        //     return val.length == 2 ;
+        // })
+        // console.log(results)
+        // console.log(newArr)
+
+        // var check = newArr.includes("Balaa");
+        // var check = newArr.findIndex(function(val){
+        //     return val == "Bala"
+        // })
+        // console.log(check)
+        var marks = [40, 50, 60, 90, 80, 55]
+
+        var total = marks.reduce(function (a, b) {
+            console.log(a,b)
+            return a + b
+        })
+
+        console.log(total)
+    </script>
+</body>
+
+</html>
