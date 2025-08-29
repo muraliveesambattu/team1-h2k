@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showFriends()">Show Friends</button>
+    <button onclick="showImages()">Show Images</button>
+    <ul></ul>
+    <div id="natureImages"></div>
+    <script>
+        var myFriends = ["Ram", "Ravi", "Kiran", "Kumar"];
+
+        var images = [
+            "https://cdn.pixabay.com/photo/2025/08/17/10/46/bird-9779577_1280.png", 
+            "https://media.istockphoto.com/id/157424683/photo/colors-of-nature.jpg?s=2048x2048&w=is&k=20&c=35iq41gYuNdoYiHwJbXfmEgK0KXskj5kGnXYKAdW6l8=", 
+            "https://media.istockphoto.com/id/508261478/photo/goup-of-parrots-in-front-of-a-white-background.jpg?s=2048x2048&w=is&k=20&c=IiEs76opd90_L-YGcHJz7RsginbvI2XXB4-pXwPXShU=", 
+            "https://media.istockphoto.com/id/513075059/photo/group-of-parrots.jpg?s=2048x2048&w=is&k=20&c=En5cvH1A6UhwjF2B85_e4rqY8EajtklF7-oo4dmXgY4="]
+
+        function showFriends() {
+            myFriends.forEach(function (val) {
+                console.log(val)
+                var myLi = document.createElement("li");
+                myLi.innerHTML = val
+                document.querySelector("ul").prepend(myLi)
+            })
+        }
+
+        function showImages(){
+            images.forEach(function (val){
+                var imgElement  = document.createElement("img")
+                imgElement.setAttribute("src",val)
+                document.getElementById("natureImages").prepend(imgElement)
+            })
+        }
+    </script>
+</body>
+
+</html>

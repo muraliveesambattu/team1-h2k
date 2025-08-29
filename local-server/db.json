@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "2a7d",
+      "fname": "Murali",
+      "lname": "Veesambattu",
+      "email": "murali.veesambattu@gmail.com"
+    },
+    {
+      "id": "ebfd",
+      "fname": "Leelavathi",
+      "lname": "KM",
+      "email": "leela@gamil.com"
+    },
+    {
+      "id": "9b63",
+      "fname": "SEKHAR",
+      "lname": "PARK",
+      "email": "vmurali100@gmail.com"
+    },
+    {
+      "fname": "Pranav",
+      "lname": "KKMKM",
+      "email": "pranav@gmail.com",
+      "id": "16de"
+    }
+  ]
+}

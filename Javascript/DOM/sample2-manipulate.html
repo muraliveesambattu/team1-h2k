@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeContent()">Change the Content</button>
+    <button onclick="addClass()">Add Class Name</button>
+    <button onclick="removeClass()">Remove Class Name</button>
+
+    <h1 style="" class="" id="" name="" >Hello .. Welcome to DOM</h1>
+
+    <script>
+        function changeContent() {
+            // var content = document.querySelector("h1").innerHTML ; // To Fetch the InnerHTML
+            // var newContent = "Hello ... I will be the New Content .....";
+            // document.querySelector("h1").innerHTML = newContent ; // To Set the InnerHTML
+            // console.log(content)
+            // document.querySelector("h1").innerHTML = "Congratulations ... You Have Changed the Content Of the Heaidng "
+        }
+
+        function addClass() {
+            var attributes = document.querySelector("h1").attributes;
+            console.log(attributes)
+
+            document.querySelector("h1").setAttribute("class", "success");
+        }
+
+        function removeClass() {
+            document.querySelector("h1").removeAttribute("class", "success")
+        }
+    </script>
+</body>
+
+</html>

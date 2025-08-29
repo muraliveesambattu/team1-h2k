@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateUserBtn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">First Name </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="">Last Name </label>
+        <input type="text" name="" id="lname"> <br>
+        <label for="">Email </label>
+        <input type="text" name="" id="email"> <br>
+        <button onclick="handleCreate()" type="button" id="createUserBtn">Create User</button>
+        <button onclick="handleUpdate()" type="button" id="updateUserBtn">Update User</button>
+        <hr>
+
+    </form>
+    <table border="1">
+        <thead>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+
+        var users = [
+            { fname: "Ram", lname: "ravi", email: "ram@gmail.com" },
+            { fname: "Raghu", lname: "ram", email: "ram@gmail.com" },
+            { fname: "Sam", lname: "Kumar", email: "sam@gmail.com" }
+        ]
+        var rowIndex = null
+
+        function handleCreate() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                email: document.getElementById("email").value
+            }
+            users.push(user)
+            handleReset();
+            handleRead();
+        };
+
+        function handleRead() {
+            document.querySelector("tbody").innerHTML = ""
+            for (i = 0; i < users.length; i++) {
+                var myTr = document.createElement("tr");
+                for (a in users[i]) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = users[i][a]
+                    myTr.appendChild(myTd)
+                }
+                // Create a Edit Button
+                var editTd = document.createElement("td");
+                var editButton = document.createElement("button")
+                editButton.innerHTML = "Edit User";
+                editButton.setAttribute("onclick", "handleEdit(" + i + ")")
+                editTd.appendChild(editButton);
+                myTr.appendChild(editTd);
+
+
+
+                // Create a Delete Button
+                var deleteTd = document.createElement("td");
+                var deleteButton = document.createElement("button");
+                deleteButton.innerHTML = "Delete User";
+                deleteButton.setAttribute("onclick", "handleDelete(" + i + ")");
+                deleteTd.appendChild(deleteButton);
+                myTr.appendChild(deleteTd);
+
+                document.querySelector("tbody").appendChild(myTr)
+            }
+        };
+
+        handleRead()
+        function handleUpdate() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                email: document.getElementById("email").value
+            }
+            users[rowIndex] = user;
+            handleRead();
+            handleReset()
+        };
+        function handleEdit(i) {
+            rowIndex = i;
+            document.getElementById("fname").value = users[i].fname;
+            document.getElementById("lname").value = users[i].lname;
+            document.getElementById("email").value = users[i].email;
+
+            document.getElementById("updateUserBtn").style.display = "block";
+            document.getElementById("createUserBtn").style.display = "none";
+        }
+
+        function handleDelete(i) {
+            console.log("handleDelete Called !!! ", i);
+            users.splice(i, 1)
+            handleRead();
+        }
+        function handleReset() {
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+
+            document.getElementById("updateUserBtn").style.display = "none";
+            document.getElementById("createUserBtn").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
