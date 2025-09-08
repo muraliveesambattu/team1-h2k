@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class CommonDetails {
+            constructor() {
+                this.city = "Bangalore";
+                this.state = "Karnataka";
+                this.zip = 560066;
+            }
+        }
+        class Person extends CommonDetails {
+            constructor(fname, lname) {
+                super()
+                this.fname = fname;
+                this.lname = lname;
+            }
+        }
+
+        var p1 = new Person("Murali", "Krishna");
+        var p2 = new Person("Ram", "Kumar");
+        var p3 = new Person("Sam", "Kumar");
+
+        console.log(p1)
+        console.log(p2)
+        console.log(p3)
+    </script>
+</body>
+
+</html>

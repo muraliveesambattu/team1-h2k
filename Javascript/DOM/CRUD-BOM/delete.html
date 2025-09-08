@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+
+    <button style="margin: 10px;" onclick="confirmDelete()">Confirm Delete</button>
+    <button style="margin: 10px;" onclick="cancleDelete()">Cancel Delete</button>
+
+    <script>
+        var user = {};
+        function getUserFromServer() {
+            var url = window.location.href;
+            var index = url.indexOf("?");
+            var id = url.substr(index + 1);
+
+            var getData = new XMLHttpRequest();
+            getData.onreadystatechange = function () {
+                if (getData.readyState == 4 && getData.status == 200) {
+                    user = JSON.parse(getData.response);
+                    console.log(JSON.parse(getData.response))
+                    for (a in user) {
+                        var myLi = document.createElement("li");
+                        myLi.innerHTML = user[a];
+                        document.querySelector("ul").appendChild(myLi);
+                    }
+                }
+            }
+            getData.open("GET", "http://localhost:3000/users/" + id);
+            getData.send();
+        }
+        getUserFromServer();
+
+        function cancleDelete() {
+            window.location.href = "Dashboard.html"
+        }
+
+        function confirmDelete() {
+            var deleteData = new XMLHttpRequest();
+            deleteData.onreadystatechange = function () {
+                if (deleteData.readyState == 4 && deleteData.status == 200) {
+                    window.location.href = "Dashboard.html"
+                }
+            }
+            deleteData.open("DELETE", "http://localhost:3000/users/" + user.id);
+            deleteData.send();
+        }
+    </script>
+</body>
+
+</html>

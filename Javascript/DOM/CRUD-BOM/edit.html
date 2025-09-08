@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">First Name </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="">Last Name </label>
+        <input type="text" name="" id="lname"> <br>
+        <label for="">Email </label>
+        <input type="text" name="" id="email"> <br>
+        <label for="">ID </label>
+        <input type="text" name="" id="id"> <br>
+        <button onclick="handleUpdate()" type="button" id="updateUserBtn">Update User</button>
+        <hr>
+
+    </form>
+
+    <script>
+        var user = {};
+        function getUserFromServer() {
+            var url = window.location.href;
+            var index = url.indexOf("?");
+            var id = url.substr(index + 1);
+
+            var getData = new XMLHttpRequest();
+            getData.onreadystatechange = function () {
+                if (getData.readyState == 4 && getData.status == 200) {
+                    user = JSON.parse(getData.response);
+                    console.log(JSON.parse(getData.response))
+                    document.getElementById("fname").value = user.fname;
+                    document.getElementById("lname").value = user.lname;
+                    document.getElementById("email").value = user.email;
+                    document.getElementById("id").value = user.id;
+
+                }
+            }
+            getData.open("GET", "http://localhost:3000/users/" + id);
+            getData.send();
+        }
+        getUserFromServer();
+
+
+        function handleUpdate() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                email: document.getElementById("email").value,
+                id: document.getElementById("id").value
+            }
+
+            var postData = new XMLHttpRequest();
+            postData.onreadystatechange = function () {
+                if (postData.readyState == 4 && postData.status == 200) {
+                    console.log("User Created Successfully !!!")
+                    window.location.href = "Dashboard.html"
+                }
+            }
+            postData.open("PUT", "http://localhost:3000/users/" + user.id);
+            postData.setRequestHeader("Content-Type", "application/json");
+            postData.send(JSON.stringify(user));
+
+        };
+
+
+    </script>
+</body>
+
+</html>

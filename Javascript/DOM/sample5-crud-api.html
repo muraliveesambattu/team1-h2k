@@ -20,6 +20,8 @@
         <input type="text" name="" id="lname"> <br>
         <label for="">Email </label>
         <input type="text" name="" id="email"> <br>
+        <label for="">ID </label>
+        <input type="text" name="" id="id"> <br>
         <button onclick="handleCreate()" type="button" id="createUserBtn">Create User</button>
         <button onclick="handleUpdate()" type="button" id="updateUserBtn">Update User</button>
         <hr>
@@ -54,6 +56,12 @@
             getData.send();
         }
 
+        function reorderObject(obj, keys) {
+            return keys.reduce((acc, key) => {
+                if (key in obj) acc[key] = obj[key];
+                return acc;
+            }, {});
+        }
         function handleCreate() {
             var user = {
                 fname: document.getElementById("fname").value,
@@ -75,7 +83,7 @@
             document.querySelector("tbody").innerHTML = ""
             for (i = 0; i < users.length; i++) {
                 var myTr = document.createElement("tr");
-                for (a in users[i]) {
+                for (a in reorderObject(users[i],["id", "fname", "lname", "email"])) {
                     var myTd = document.createElement("td");
                     myTd.innerHTML = users[i][a]
                     myTr.appendChild(myTd)
@@ -118,7 +126,7 @@
             document.getElementById("fname").value = users[i].fname;
             document.getElementById("lname").value = users[i].lname;
             document.getElementById("email").value = users[i].email;
-
+            document.getElementById("id").value = users[i].id;
             document.getElementById("updateUserBtn").style.display = "block";
             document.getElementById("createUserBtn").style.display = "none";
         }
@@ -127,7 +135,8 @@
             var user = {
                 fname: document.getElementById("fname").value,
                 lname: document.getElementById("lname").value,
-                email: document.getElementById("email").value
+                email: document.getElementById("email").value,
+                id: document.getElementById("id").value
             }
 
             var postData = new XMLHttpRequest();

@@ -1,28 +1,60 @@
 {
   "users": [
     {
-      "id": "2a7d",
-      "fname": "Murali",
+      "fname": "Murali SM",
       "lname": "Veesambattu",
-      "email": "murali.veesambattu@gmail.com"
+      "email": "murali.veesambattu@gmail.com",
+      "id": "1931"
     },
     {
-      "id": "ebfd",
       "fname": "Leelavathi",
-      "lname": "KM",
-      "email": "leela@gamil.com"
+      "lname": "KM NKM",
+      "email": "leela@gamil.com",
+      "id": "4da2"
     },
     {
-      "id": "9b63",
-      "fname": "SEKHAR",
-      "lname": "PARK",
-      "email": "vmurali100@gmail.com"
+      "fname": "Ram MMM",
+      "lname": "Kumar",
+      "email": "ram@gmail.com",
+      "id": "8b33"
     },
     {
-      "fname": "Pranav",
-      "lname": "KKMKM",
-      "email": "pranav@gmail.com",
-      "id": "16de"
+      "id": "23df",
+      "fname": "Kiran",
+      "lname": "Kumar",
+      "email": "kiran@gmail.com"
+    }
+  ],
+  "employees": [
+    {
+      "fullName": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "Alice@123",
+      "confirmPassword": "Alice@123"
+    },
+    {
+      "fullName": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "password": "Bob@456",
+      "confirmPassword": "Bob@456"
+    },
+    {
+      "fullName": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "password": "Charlie@789",
+      "confirmPassword": "Charlie@789"
+    },
+    {
+      "fullName": "Diana Miller",
+      "email": "diana.miller@example.com",
+      "password": "Diana@101",
+      "confirmPassword": "Diana@101"
+    },
+    {
+      "fullName": "Ethan Wilson",
+      "email": "ethan.wilson@example.com",
+      "password": "Ethan@202",
+      "confirmPassword": "Ethan@202"
     }
   ]
 }
