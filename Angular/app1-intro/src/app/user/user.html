@@ -1,0 +1,26 @@
+<p>{{message}}</p>
+
+<ul>
+    <li>{{person.fname}}</li>
+    <li>{{person.lname}}</li>
+</ul>
+
+<!-- <ul >
+    <li *ngFor="let usr of users">{{usr}}</li>
+</ul> -->
+
+<!-- <button (click)="handleClick()">Click</button> -->
+<ul>
+    <!-- @for (usr of users; let i = $index) {
+    <li (click)="handleClick(usr)">{{ usr.name }}</li>
+    } -->
+    @for (usr of users; track usr.name; let i = $index) {
+    <li (click)="handleClick(usr)">{{ usr.name }}</li>
+    }
+</ul>
+
+<ul>
+    @for (item of person | keyvalue; track item.key) {
+    <li>{{ item.value }} </li>
+    }
+</ul>
