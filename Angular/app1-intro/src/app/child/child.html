@@ -1,0 +1,23 @@
+<p>child works!</p>
+
+<ul>
+    <li>Message Received From Parent : {{receiveMessage}}</li>
+</ul>
+<hr>
+<h2>Object Data</h2>
+
+<ul>
+    @for (item of receivePerson | keyvalue; track item.key) {
+    <li>{{ item.value }} </li>
+    }
+</ul>
+<hr>
+<ul>
+    @for (usr of recieveUsers; track usr.name; let i = $index) {
+    <li (click)="handleClick(usr)">{{ usr.id }}</li>
+    <li (click)="handleClick(usr)">{{ usr.name }}</li>
+    <li (click)="handleClick(usr)">{{ usr.role }}</li>
+    <br>
+
+    }
+</ul>

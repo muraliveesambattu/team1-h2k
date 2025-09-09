@@ -1,0 +1,10 @@
+<p>parent works!</p>
+
+<app-child [receiveMessage]="welcomeMsg" [receivePerson]="person" [recieveUsers]="users"></app-child>
+
+<!-- To Send the Data From Parent To Child 
+1. Create a Variable in Parent Component .
+2. Create a Variable in Child Component with @Input() Decorator .
+3. With attribute Binding Add Both the Variable as follows 
+        [receiveMessage]="welcomeMsg" 
+4. Use the Received Variable In Child Component  -->

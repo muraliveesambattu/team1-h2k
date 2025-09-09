@@ -1,0 +1,10 @@
+<p>parent-demo works!</p>
+
+
+<ul>
+    <li>Message from Child is : {{messageFromChild}}</li>
+</ul>
+
+<hr>
+
+<app-child-demo (sendInfo) = "getInfoParent($event)"></app-child-demo>
