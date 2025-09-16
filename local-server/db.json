@@ -1,60 +1,64 @@
 {
-  "users": [
-    {
-      "fname": "Murali SM",
-      "lname": "Veesambattu",
-      "email": "murali.veesambattu@gmail.com",
-      "id": "1931"
-    },
-    {
-      "fname": "Leelavathi",
-      "lname": "KM NKM",
-      "email": "leela@gamil.com",
-      "id": "4da2"
-    },
-    {
-      "fname": "Ram MMM",
-      "lname": "Kumar",
-      "email": "ram@gmail.com",
-      "id": "8b33"
-    },
-    {
-      "id": "23df",
-      "fname": "Kiran",
-      "lname": "Kumar",
-      "email": "kiran@gmail.com"
-    }
-  ],
   "employees": [
     {
-      "fullName": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "password": "Alice@123",
-      "confirmPassword": "Alice@123"
+      "id": 1,
+      "fname": "John",
+      "lname": "Doe",
+      "email": "john.doe@example.com"
     },
     {
-      "fullName": "Bob Smith",
-      "email": "bob.smith@example.com",
-      "password": "Bob@456",
-      "confirmPassword": "Bob@456"
+      "id": 2,
+      "fname": "Jane",
+      "lname": "Smith",
+      "email": "jane.smith@example.com"
     },
     {
-      "fullName": "Charlie Brown",
-      "email": "charlie.brown@example.com",
-      "password": "Charlie@789",
-      "confirmPassword": "Charlie@789"
+      "id": 3,
+      "fname": "Raj",
+      "lname": "Kumar",
+      "email": "raj.kumar@example.com"
     },
     {
-      "fullName": "Diana Miller",
-      "email": "diana.miller@example.com",
-      "password": "Diana@101",
-      "confirmPassword": "Diana@101"
+      "id": 4,
+      "fname": "Priya",
+      "lname": "Sharma",
+      "email": "priya.sharma@example.com"
     },
     {
-      "fullName": "Ethan Wilson",
-      "email": "ethan.wilson@example.com",
-      "password": "Ethan@202",
-      "confirmPassword": "Ethan@202"
+      "id": 5,
+      "fname": "David",
+      "lname": "Miller",
+      "email": "david.miller@example.com"
+    },
+    {
+      "id": 6,
+      "fname": "Anita",
+      "lname": "Nair",
+      "email": "anita.nair@example.com"
+    },
+    {
+      "id": 7,
+      "fname": "Carlos",
+      "lname": "Garcia",
+      "email": "carlos.garcia@example.com"
+    },
+    {
+      "id": 8,
+      "fname": "Meena",
+      "lname": "Patel",
+      "email": "meena.patel@example.com"
+    },
+    {
+      "id": 9,
+      "fname": "Robert",
+      "lname": "Brown",
+      "email": "robert.brown@example.com"
+    },
+    {
+      "id": 10,
+      "fname": "Sophia",
+      "lname": "Wilson",
+      "email": "sophia.wilson@example.com"
     }
   ]
 }

@@ -1,0 +1,44 @@
+<p>student works!</p>
+
+<form #studentForm="ngForm">
+    <label for="">First Name : </label>
+    <input type="text" name="fname" ngModel> <br>
+    <label for="">Last Name : </label>
+    <input type="text" name="lname" ngModel> <br>
+    <label for="">Email :</label>
+    <input type="text" name="email" ngModel> <br>
+
+    @if (editIndex !== null) {
+    <button type="button" (click)="updateStudent(studentForm)">Update</button>
+    } @else {
+    <button type="button" (click)="addStudent(studentForm)">Submit</button>
+    }
+</form>
+
+<hr>
+<table border="1">
+    <thead>
+        <tr>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of allStudents; track $index;let i = $index ) {
+        <tr>
+            <td>{{item.fname}}</td>
+            <td>{{item.lname}}</td>
+            <td>{{item.email}}</td>
+            <td>
+                <button (click)="handleEdi(item,studentForm,i)">Edit Student</button>
+            </td>
+            <td>
+                <button (click)="handleDelete(item)">Delete Student</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

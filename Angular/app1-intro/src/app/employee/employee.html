@@ -1,0 +1,41 @@
+<form [formGroup]="employeeForm">
+    <label for="">First Name :</label>
+    <input type="text" name="" formControlName="fname"> <br>
+    <label for="">Last Name : </label>
+    <input type="text" name="" formControlName="lname"> <br>
+    <label for="">Email : </label>
+    <input type="text" name="" formControlName="email"> <br>
+    @if (editIndex == null) {
+    <button (click)="addEmployee()">Add Employee</button>
+
+    } @else {
+    <button (click)="updateEmployee()">Update Employee</button>
+
+    }
+</form>
+
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @for (emp of employees; track $index ; let i= $index) {
+        <tr>
+            <td>{{emp.fname}}</td>
+            <td>{{emp.lname}}</td>
+            <td>{{emp.email}}</td>
+            <td><button (click)="handleEdit(i)">Edit Employee</button></td>
+            <td><button (click)="handleDelete(i)">Delete Employee</button></td>
+        </tr>
+        }
+    </tbody>
+</table>

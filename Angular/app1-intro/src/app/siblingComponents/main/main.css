@@ -1,0 +1,8 @@
+#myMain{
+    padding: 20px;
+    border: 1px solid red;
+    display: flex;
+}
+.box{
+    width: 45%;
+}

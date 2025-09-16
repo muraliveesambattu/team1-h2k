@@ -4,10 +4,13 @@ import { Sample } from './sample/sample';
 import { User } from './user/user';
 import { Parent } from './parent/parent';
 import { ParentDemo } from './ChildToParent/parent-demo/parent-demo';
+import { Main } from './siblingComponents/main/main';
+import { Student } from './student/student';
+import { Employee } from './employee/employee';
 
 @Component({
   selector: 'app-root',
-  imports: [ParentDemo],
+  imports: [Employee],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
