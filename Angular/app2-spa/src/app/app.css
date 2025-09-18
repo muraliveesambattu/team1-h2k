@@ -1,0 +1,7 @@
+li {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+  background: lightgray;
+  margin: 10px;
+}

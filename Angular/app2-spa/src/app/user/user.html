@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>User Management (CRUD)</h2>
+
+  <!-- Form -->
+  <form (ngSubmit)="editMode ? updateUser() : addUser()" #userForm="ngForm">
+    <input
+      type="text"
+      placeholder="Enter name"
+      [(ngModel)]="newUser.name"
+      name="name"
+      required
+    />
+    <input
+      type="email"
+      placeholder="Enter email"
+      [(ngModel)]="newUser.email"
+      name="email"
+      required
+    />
+    <button type="submit">{{ editMode ? 'Update' : 'Add' }} User</button>
+  </form>
+
+  <hr />
+
+  <!-- Users List -->
+  <h3>User List</h3>
+  <ul>
+    @for (user of users(); track user.id) {
+      <li>
+        <strong>{{ user.name }}</strong> - {{ user.email }}
+        <button (click)="editUser(user)">Edit</button>
+        <button (click)="deleteUser(user.id)">Delete</button>
+      </li>
+    }
+  </ul>
+</div>
